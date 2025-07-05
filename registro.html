@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Pacientes - Hospital Philips</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enlaza tu CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER: solo markup, sin CSS incrustado -->
+  <header>
+    <div class="container containerHeader">
+      <div class="containerLogo">
+        <img src="img/philips.png" alt="Logo">
+      </div>
+      <nav class="containerNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#presentacion">Nosotros</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#form">Ubicación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="cadastro" style="height:auto !important;">
+      <div class="container">
+        <form>
+          <div class="containerForm">
+            <h2>Cadastro de Pacientes</h2>
+            <p>Complete todos los campos para registrar un nuevo paciente.</p>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="text" name="cpf" placeholder="CPF (11 dígitos)" required pattern="\d{11}" maxlength="11">
+            <input type="date" name="nacimiento" required>
+            <input type="text" name="endereco" placeholder="Dirección" required>
+            <input type="text" name="convenio" placeholder="Convênio (Obra social)" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" required pattern="\d{10,11}">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <textarea name="observaciones" rows="3" placeholder="Observaciones"></textarea>
+            <button type="submit" class="btnRegistro">Registrar Paciente</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+ footer>
+    <div class="container containerFooter">
+      <p>&copy; 2023 Hospital Philips. Todos los derechos reservados.</p>
+      <ul>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos de Servicio</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

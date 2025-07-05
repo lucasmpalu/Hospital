@@ -1,0 +1,480 @@
+:root {
+  --azul-philips: #0072c6;
+  --azul-claro: #00a1e4;
+  --gris-claro: #f4f4f4;
+  --gris-medio:rgb(239, 239, 239);
+  --blanco: #ffffff;
+  --negro-texto: #222222;
+}
+h2 {
+    font-size: 2.5rem;
+    color: var(--negro-texto);
+}
+
+p, ul {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--azul-claro);
+    font-family: 'Arial', sans-serif;
+}
+
+
+.container {
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+/*HEADER*/
+
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: var(--blanco);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.containerHeader {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.containerLogo {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.containerLogo img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.containerNav {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}   
+
+.containerNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap:1rem;
+}
+
+
+
+.containerNav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--azul-philips)!important;
+    transition: color 0.2s;
+}
+
+.containerNav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--azul-philips);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.containerNav a:hover::after {
+    transform: scaleX(1);
+}
+
+/*MAIN*/
+main {
+    width: 100%;
+    min-height: 75vh;
+    background-color: var(--azul-claro);
+    padding-top: 15vh;
+}
+
+main section {
+    height: 85vh!important;
+}
+
+
+/* HERO */
+
+.Hero {
+    width: 100%;
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0)); /* Overlay oscuro */
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.containerHero {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    color: var(--blanco);
+    }
+.Hero h1 {
+    font-size: 2.5rem;
+}
+
+.Hero a {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--azul-philips);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.Hero a:hover {
+    background-color: var(--azul-claro);
+}
+
+
+
+
+
+
+/* SERVICIOS */
+
+.seccionServicios {
+    width: 100%;
+    height: 75vh;
+    background-color: var(--gris-medio);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerServicios {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cardsServicios {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardServicio {
+    background: var(--blanco);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.cardServicio:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.cardServicio img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.cardServicio h3 {
+    margin-bottom: 1rem;
+    color: var(--azul-philips);
+    font-size: 1.1rem;
+}
+
+.btnServicio {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--azul-philips);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+
+.btnServicio:hover {
+    background: var(--azul-claro);
+}
+
+
+
+/* FORMULARIO */
+
+.seccionForm {
+    width: 100%;
+    height: 75vh!important;
+    background-color: var(--gris-claro);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 2rem;
+}
+
+hr {
+hr {
+    height: 80%;
+    width: 2px;
+    background-color: var(--azul-philips);
+    border: none;
+    align-self: center;
+    min-height: 50px;
+    display: block;
+}
+}
+form,
+.localizacion {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.seccionForm .container {
+    display:flex
+}
+
+.containerSeccionForm {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height:100%;
+    padding: 2rem 0;
+}
+.containerForm,
+.containerLocalizacion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 1rem;
+}
+
+.containerForm input,
+.containerForm textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--azul-philips);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--azul-claro);
+}
+
+.mapa {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--gris-medio);
+    border-radius: 0.5rem;
+    overflow: hidden;
+        border-radius: 0.5rem;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+ /* FOOTER */
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--azul-philips);
+        color: var(--blanco)
+}
+
+.containerFooter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerFooter ul {
+    display: flex;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+        color: var(--blanco)!important;
+
+}
+
+/* ===== Registro de Pacientes ===== */
+#cadastro {
+  padding: 4rem 0;
+  background-color: var(--gris-claro);
+  display: flex;
+  justify-content: center;
+}
+
+#cadastro .containerForm {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+#cadastro .containerForm h2 {
+  margin-bottom: 1rem;
+  color: var(--azul-philips);
+}
+
+#cadastro .containerForm p {
+  margin-bottom: 2rem;
+}
+
+#cadastro .containerForm input,
+#cadastro .containerForm textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gris-medio);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+#cadastro .containerForm input:focus,
+#cadastro .containerForm textarea:focus {
+  outline: none;
+  border-color: var(--azul-philips);
+  box-shadow: 0 0 0 2px rgba(0,114,198,0.2);
+}
+
+.btnRegistro {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--azul-philips);
+  color: var(--blanco);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btnRegistro:hover {
+  background-color: var(--azul-claro);
+  transform: translateY(-2px);
+}
+
+#cadastro {
+  padding: 4rem 0;
+  background-color: var(--gris-claro);
+  display: flex;
+  justify-content: center;
+}
+
+#cadastro .containerForm {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

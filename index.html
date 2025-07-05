@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container containerHeader">
+            <div class="containerLogo">
+                <img src="img/philips.png" alt="Logo">
+            </div>
+            <nav class="containerNav">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="index.html#servicios">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="index.html#form">Ubicación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="Hero" id="presentacion">
+            <div class="container">
+                <div class="containerHero">
+                    <h1>Bienvenido al Hospital Philips</h1>
+                    <p>En nuestro hospital, nos dedicamos a brindar atención médica de calidad con un enfoque humano y profesional. Nuestro equipo está comprometido con la salud y el bienestar de nuestros pacientes.<br>
+                    Contamos con instalaciones modernas y tecnología avanzada para ofrecer diagnósticos precisos y tratamientos efectivos. Nuestro personal médico altamente capacitado está disponible las 24 horas del día para atender emergencias y consultas programadas.<br>
+                    En Philips, creemos en la importancia de la prevención y la educación en salud. Ofrecemos programas de concientización y chequeos regulares para ayudar a nuestros pacientes a mantener un estilo de vida saludable.
+                    </p>
+                        <a href="registro.html">¡Agendar una cita!</a>
+                </div>
+            </div>
+        </section>
+        <section class="seccionServicios" id="servicios">
+            <div class="container">
+            <div class="containerServicios">
+                <h2>Nuestros Servicios</h2>
+                <div class="cardsServicios">
+                    <div class="cardServicio">
+                        <img src="img/diagnostico-imagenes.jpg" alt="Diagnóstico por Imágenes">
+                        <h3>Diagnóstico por Imágenes</h3>
+                        <a href="#" class="btnServicio">Ver más</a>
+                    </div>
+                    <div class="cardServicio">
+                        <img src="img/laboratorio.jpg" alt="Laboratorio Clínico">
+                        <h3>Laboratorio Clínico</h3>
+                        <a href="#" class="btnServicio">Ver más</a>
+                    </div>
+                    <div class="cardServicio">
+                        <img src="img/urgencias.png" alt="Urgencias 24hs">
+                        <h3>Urgencias 24hs</h3>
+                        <a href="#" class="btnServicio">Ver más</a>
+                    </div>
+                    <div class="cardServicio">
+                        <img src="img/consultas.jpeg" alt="Consultas Médicas">
+                        <h3>Consultas Médicas</h3>
+                        <a href="#" class="btnServicio">Ver más</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="seccionForm" id="form">
+            <div class="container">
+            <div class="containerSeccionForm">                
+                <form action="">
+                    <div class="containerForm">
+                        <h2>Formulario de Contacto</h2>
+                        <p>Por favor, complete el siguiente formulario para ponerse en contacto con nosotros.</p>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+                <hr>
+                <div class="localizacion">
+                    <div class="containerLocalizacion">
+                        <h2>Nuestra Ubicación</h2>
+                        <p>Estamos ubicados en el corazón de la ciudad, con fácil acceso a transporte público y estacionamiento.</p>
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps?q=Philips+Blumenau,+Rua+Gustavo+Zimmermann,+Blumenau,+SC,+Brasil&output=embed"
+                                allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="containerFooter">
+                <p>&copy; 2023 Hospital Philips. Todos los derechos reservados.</p>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
