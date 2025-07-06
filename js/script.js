@@ -18,7 +18,7 @@ boxLogin.addEventListener("click", (e) => {
             if (confirm("¿Está seguro que desea cerrar sesión?")) {
                 localStorage.removeItem("sesionActiva");
                 window.location.href = "index.html";
-        boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">Log In</span>`;
+        boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">Login</span>`;
             }
         } else {
             window.location.href = "login.html";
@@ -33,7 +33,7 @@ boxLoginResponsive.addEventListener("click", (e) => {
         if (confirm("¿Está seguro que desea cerrar sesión?")) {
             localStorage.removeItem("sesionActiva");
             window.location.href = "index.html";
-            boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Log In</span>`;
+            boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Login</span>`;
         }
     } else {
         window.location.href = "login.html";
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRegistro.style.display = "none";
         txtRegistro.style.display = "none";
     } else {
-        boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">Log In</span>`;
-        boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Log In</span>`;
+        boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">Login</span>`;
+        boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Login</span>`;
         titulo.innerHTML = "Bienvenido al Hospital Philips, invitado";
     }
 });
