@@ -344,13 +344,24 @@ form,
     gap: 1rem;
 }
 
-.containerForm input,
+.containerForm input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
 .containerForm textarea {
     width: 100%;
     padding: 1rem;
     border: 1px solid var(--gris-medio);
     border-radius: 0.5rem;
     font-size: 1rem;
+    flex: 1 1 auto;
+    min-height: 120px;
+    resize: vertical;
 }
 
 button[type="submit"] {
@@ -517,7 +528,28 @@ footer a {
 
 @media (max-width: 768px) {
 
-  
+  footer {
+    height: auto;
+  }
+
+  footer .container {
+    padding: 0!important;
+  }
+
+
+  .containerFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0!important;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
   .containerNavResponsive {
     display: flex;
@@ -598,6 +630,13 @@ footer a {
   #cadastro .containerForm {
     box-shadow: none;
     padding: 1rem;
+  }
+
+  footer  {
+    height: auto;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   footer .containerFooter {
