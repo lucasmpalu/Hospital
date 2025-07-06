@@ -504,9 +504,35 @@ footer a {
     width: auto;
 }
 
+.menuResponsive {
+    display: none;
+}
+
+.containerNavResponsive {
+    display: none;
+   
+}
+
 /* RESPONSIVE  */
 
 @media (max-width: 768px) {
+
+  
+
+  .containerNavResponsive {
+    display: flex;
+  }
+
+  .userLogResponsive {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--azul-philips);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+
 
   .buttonResponsive {
     display: inline-block;
@@ -558,6 +584,12 @@ footer a {
     padding: 2rem 1rem;
     height: auto !important;
   }
+
+.seccionForm .containerSeccionForm {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .containerForm,
   form,
   .localizacion {
@@ -586,4 +618,7 @@ footer a {
     margin-bottom: 0.75rem;
     padding: 0.75rem;
   }
+
+
+  
 }

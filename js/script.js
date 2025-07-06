@@ -1,5 +1,7 @@
 const nombrePaciente = localStorage.getItem("sesionActiva") ? JSON.parse(localStorage.getItem("sesionActiva")).nombre : null;
 const boxLogin = document.querySelector(".userLog");
+const boxLoginResponsive = document.querySelector(".userLogResponsive");
+const nombrePacienteResponsive = document.getElementById("nombrePaciente");
 const titulo = document.querySelector(".titulo");
 const formulario = document.getElementById("formulario");
 const btnRegistro = document.querySelector(".btnRegistro");
@@ -24,14 +26,31 @@ boxLogin.addEventListener("click", (e) => {
     }
 );
 
+boxLoginResponsive.addEventListener("click", (e) => {
+    e.preventDefault();
+    const nombre = localStorage.getItem("sesionActiva");
+    if (nombre) {
+        if (confirm("¿Está seguro que desea cerrar sesión?")) {
+            localStorage.removeItem("sesionActiva");
+            window.location.href = "index.html";
+            boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Login</span>`;
+        }
+    } else {
+        window.location.href = "login.html";
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     if (nombrePaciente) {
         boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">${nombrePaciente}</span>`;
+        boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">${nombrePaciente}</span>`;
         titulo.innerHTML = `Bienvenido al Hospital Philips, ${nombrePaciente}`;
         btnRegistro.style.display = "none";
         txtRegistro.style.display = "none";
     } else {
         boxLogin.innerHTML = `<img src="img/acceso.png" alt="User Icon"><span class="userLog">Login</span>`;
+        boxLoginResponsive.innerHTML = `<img src="img/acceso.png" alt="Login Icon"><span id="nombrePaciente">Login</span>`;
         titulo.innerHTML = "Bienvenido al Hospital Philips, invitado";
     }
 });
