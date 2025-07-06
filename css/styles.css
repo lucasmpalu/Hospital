@@ -541,11 +541,14 @@ footer a {
 
   footer {
     height: auto;
+
   }
 
-  footer .container {
-    padding: 0!important;
+  .container {
+    padding: 1rem!important
   }
+
+
 
 
   .containerFooter {
