@@ -79,7 +79,17 @@ formulario.addEventListener("submit", (e) => {
         pacientes.push(paciente);
         localStorage.setItem("pacientes", JSON.stringify(pacientes));
 
-        alert("Registro guardado exitosamente.");
+        alert("Registro guardado exitosamente.\n" +
+            "Datos del paciente:\n" +
+            "Nombre: " + paciente.nombre + "\n" +
+            "CPF: " + paciente.cpf + "\n" +
+            "Fecha de Nacimiento: " + paciente.nacimiento + "\n" +
+            "Dirección: " + paciente.direccion + "\n" +
+            "Convênio: " + paciente.convenio + "\n" +
+            "Teléfono: " + paciente.telefono + "\n" +
+            "Email: " + paciente.email + "\n" +
+            "Usuario: " + paciente.usuario + "\n" +
+            "Observaciones: " + paciente.observaciones);
         formulario.reset();
         window.location.href = "index.html";
         localStorage.setItem("sesionActiva", JSON.stringify({nombre: paciente.nombre, usuario: paciente.usuario}));
