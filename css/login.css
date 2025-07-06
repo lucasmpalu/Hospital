@@ -39,4 +39,10 @@
     .containerNav {
         display: none;  
     }
+
+    input {
+        width: 100%;
+    }
+
+    
 }
