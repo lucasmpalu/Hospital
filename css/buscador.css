@@ -28,8 +28,7 @@ body {
     background: var(--blanco);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    width: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);    width: 100%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -67,6 +66,7 @@ body {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+    
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -119,8 +119,7 @@ footer {
 
 html {
     height: 100%;
-    background: var(--gris-claro); /* Fondo igual al main */
-}
+    background: var(--gris-claro); 
 
 .containerFooter {
     margin: 0 auto;
@@ -138,7 +137,7 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         background: var(--gris-claro);
-        min-height: calc(100vh - 15vh - 120px); /* header + footer aprox */
+        min-height: calc(100vh - 15vh - 120px); 
     }
     .seccionForm {
         flex-direction: column;

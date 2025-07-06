@@ -239,8 +239,7 @@ main section {
 .cardServicio {
     background: var(--blanco);
     border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    width: 220px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);    width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -278,6 +277,8 @@ main section {
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bold;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
     margin-top: 0.5rem;
     transition: background 0.2s;
 }
@@ -351,6 +352,7 @@ form,
     border-radius: 0.5rem;
     font-size: 1rem;
     margin-bottom: 1rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .containerForm textarea {
@@ -362,6 +364,8 @@ form,
     flex: 1 1 auto;
     min-height: 120px;
     resize: vertical;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 button[type="submit"] {
@@ -374,6 +378,8 @@ button[type="submit"] {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+
 }
 
 button[type="submit"]:hover {
@@ -387,6 +393,8 @@ button[type="submit"]:hover {
     border-radius: 0.5rem;
     overflow: hidden;
         border-radius: 0.5rem;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
 
 }
 
@@ -394,6 +402,7 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+    
 }
 
  /* FOOTER */
@@ -479,6 +488,8 @@ footer a {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+
   transition: background 0.3s, transform 0.2s;
 }
 

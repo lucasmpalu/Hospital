@@ -7,7 +7,6 @@
 
 .seccionForm#login .container {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -18,7 +17,7 @@
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 .containerForm {
@@ -32,6 +31,8 @@
 .login-form-container input,
 .login-form-container button {
     width: auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+
 }
 
 @media (max-width: 768px) {
