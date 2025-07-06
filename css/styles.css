@@ -292,7 +292,7 @@ main section {
 
 .seccionForm {
     width: 100%;
-    height: 75vh!important;
+    min-height: 85vh!important;
     background-color: var(--gris-claro);
     display: flex;
     flex-direction: row;
@@ -424,7 +424,7 @@ footer a {
 
 }
 
-/*  Registro de Pacientes  */
+/*  REGISTRO DE PACIENTES  */
 
 #cadastro {
   padding: 4rem 0;
@@ -555,6 +555,12 @@ footer a {
     display: flex;
   }
 
+  .containerNavResponsive ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
   .userLogResponsive {
     display: flex;
     align-items: center;
@@ -562,6 +568,23 @@ footer a {
     color: var(--azul-philips);
     cursor: pointer;
     transition: transform 0.2s;
+  }
+
+  .buscadorResponsive {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--azul-philips);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .buscadorResponsive a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--azul-philips);
   }
 
 
