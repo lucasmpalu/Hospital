@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Hospital Philips</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <div class="container containerHeader">
+            <div class="containerLogo">
+                <img src="img/philips.png" alt="Logo">
+            </div>
+            <nav class="containerNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="seccionForm" id="login">
+            <div class="container">
+                <form class="login-form-container">
+                    <div class="containerForm">
+                        <h2>Iniciar Sesión</h2>
+                        <p>Ingrese sus credenciales para acceder al sistema.</p>
+                        <input id="usuario" type="text" name="usuario" placeholder="Usuario o Email" required>
+                        <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña" required>
+                        <span class="error" style="color: red; display: none;"></span>
+                        <button type="submit">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>

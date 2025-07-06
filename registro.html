@@ -12,7 +12,8 @@
   <header>
     <div class="container containerHeader">
       <div class="containerLogo">
-                <a href="index.html"><img src="img/philips.png" alt="Logo"></a>
+            <img src="img/philips.png" alt="Logo">
+      </div>
       <nav class="containerNav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -29,18 +30,20 @@
   <main>
     <section id="cadastro" style="height:auto !important;">
       <div class="container">
-        <form>
+        <form id="formulario">
           <div class="containerForm">
             <h2>Cadastro de Pacientes</h2>
             <p>Complete todos los campos para registrar un nuevo paciente.</p>
-            <input type="text" name="nombre" placeholder="Nombre completo" required>
-            <input type="text" name="cpf" placeholder="CPF (11 dígitos)" required pattern="\d{11}" maxlength="11">
-            <input type="date" name="nacimiento" required>
-            <input type="text" name="endereco" placeholder="Dirección" required>
-            <input type="text" name="convenio" placeholder="Convênio (Obra social)" required>
-            <input type="tel" name="telefono" placeholder="Teléfono" required pattern="\d{10,11}">
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <textarea name="observaciones" rows="3" placeholder="Observaciones"></textarea>
+            <input type="text" name="nombre" placeholder="Nombre completo" id="nombre" required>
+            <input type="text" name="cpf" placeholder="CPF (11 dígitos)" id="cpf" required pattern="\d{11}" maxlength="11">
+            <input type="date" name="nacimiento" id="nacimiento" required>
+            <input type="text" name="endereco" placeholder="Dirección" id="direccion" required>
+            <input type="text" name="convenio" placeholder="Convênio (Obra social)" id="convenio" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" id="telefono"   pattern="^\d{11}$|^\d{3}\.\d{3}\.\d{3}-\d{2}$" required>
+            <input type="email" name="email" placeholder="Correo electrónico" id="email" required>
+            <input type="text" name="usuario" placeholder="Nombre de usuario" id="usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" id="password" required>
+            <textarea name="observaciones" rows="3" placeholder="Observaciones" id="observaciones"></textarea>
             <button type="submit" class="btnRegistro">Registrar Paciente</button>
           </div>
         </form>
@@ -57,5 +60,6 @@
       </ul>
     </div>
   </footer>
+  <script src="js/registro.js"></script>
 </body>
 </html>

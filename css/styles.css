@@ -120,6 +120,19 @@ header {
     transform: scaleX(1);
 }
 
+.userLog {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--azul-philips);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.userLog:hover {
+    transform: scale(1.05);
+}
+
 /*MAIN*/
 main {
     width: 100%;
@@ -230,6 +243,7 @@ main section {
     width: 220px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -325,7 +339,7 @@ form,
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start; 
     gap: 1rem;
 }
@@ -486,8 +500,7 @@ footer a {
 }
 
 .buttonResponsive img {
-    height: 2.5rem;
-    width: 
+    height: 3.5rem;
     width: auto;
 }
 
@@ -500,13 +513,10 @@ footer a {
 
   }
 
-  .button:hover {
-
-  }
-
   .containerNav {
     display: none;
   }
+  
   header {
     height: auto;
     padding: 1rem;
@@ -539,6 +549,7 @@ footer a {
   .cardServicio {
     width: 100%;
     max-width: 320px;
+
   }
 
   .seccionForm,

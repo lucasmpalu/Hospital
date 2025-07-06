@@ -10,7 +10,7 @@
     <header>
         <div class="container containerHeader">
             <div class="containerLogo">
-                <a href="index.html"><img src="img/philips.png" alt="Logo"></a>
+                <img src="img/philips.png" alt="Logo">
             </div>
             <nav class="containerNav">
                 <ul>
@@ -26,6 +26,10 @@
                     <li>
                         <a href="index.html#form">Ubicación</a>
                     </li>
+                    <li class="userLog">
+                        <img src="img/acceso.png" alt="Login" class="login-icon">
+                        <span id="nombrePaciente"></span>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -34,12 +38,12 @@
         <section class="Hero" id="presentacion">
             <div class="container">
                 <div class="containerHero">
-                    <h1>Bienvenido al Hospital Philips</h1>
+                    <h1 class="titulo">Bienvenido al Hospital Philips</h1>
                     <p>En nuestro hospital, nos dedicamos a brindar atención médica de calidad con un enfoque humano y profesional. Nuestro equipo está comprometido con la salud y el bienestar de nuestros pacientes.<br>
                     Contamos con instalaciones modernas y tecnología avanzada para ofrecer diagnósticos precisos y tratamientos efectivos. Nuestro personal médico altamente capacitado está disponible las 24 horas del día para atender emergencias y consultas programadas.<br>
                     En Philips, creemos en la importancia de la prevención y la educación en salud. Ofrecemos programas de concientización y chequeos regulares para ayudar a nuestros pacientes a mantener un estilo de vida saludable.
-                    </p>
-                        <a href="registro.html">¡Agendar una cita!</a>
+                    <p class="txtRegistro">REGISTRATE AHORA HACIENDO CLIC AQUÍ 👇</p>
+                    <a class="btnRegistro" href="registro.html">¡Regístrate!</a>
                 </div>
             </div>
         </section>
@@ -75,13 +79,16 @@
         <section class="seccionForm" id="form">
             <div class="container">
             <div class="containerSeccionForm">                
-                <form action="">
+                <form id="formulario" action="submit" method="post">
                     <div class="containerForm">
                         <h2>Formulario de Contacto</h2>
                         <p>Por favor, complete el siguiente formulario para ponerse en contacto con nosotros.</p>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <span class="error"></span>
                         <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                        <span class="error"></span>
                         <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                        <span class="error"></span>
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
@@ -112,5 +119,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
