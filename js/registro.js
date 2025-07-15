@@ -5,6 +5,7 @@ formulario.addEventListener("submit", (e) => {
 
     const paciente = {
         nombre: document.getElementById("nombre").value.trim(),
+        apellido: document.getElementById("apellido").value.trim(),
         cpf: document.getElementById("cpf").value.trim().replace(/[.-]/g, ''),
         nacimiento: document.getElementById("nacimiento").value.trim(),
         direccion: document.getElementById("direccion").value.trim(),
@@ -18,6 +19,7 @@ formulario.addEventListener("submit", (e) => {
 
     const errores = {
         nombre: '',
+        apellido: '',
         cpf: '',
         nacimiento: '',
         direccion: '',
@@ -34,7 +36,11 @@ formulario.addEventListener("submit", (e) => {
     } else if (paciente.nombre.length < 3) {
         errores.nombre = 'El nombre debe tener al menos 3 caracteres';
     }
-
+    if(paciente.apellido === '') {
+        errores.apellido = 'El apellido es obligatorio';
+    } else if (paciente.apellido.length < 3) {
+        errores.apellido = 'El apellido debe tener al menos 3 caracteres';
+    }
     if (!/^\d{11}$/.test(paciente.cpf)) {
         errores.cpf = 'El CPF debe tener exactamente 11 dígitos numéricos';
     }
@@ -73,7 +79,10 @@ formulario.addEventListener("submit", (e) => {
         return;
     }
 
-
+    // Asignar id único si no existe
+    if (!paciente.id) {
+        paciente.id = Date.now().toString() + Math.floor(Math.random() * 1000);
+    }
 
         const pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
         pacientes.push(paciente);
@@ -82,6 +91,7 @@ formulario.addEventListener("submit", (e) => {
         alert("Registro guardado exitosamente.\n" +
             "Datos del paciente:\n" +
             "Nombre: " + paciente.nombre + "\n" +
+            "Apellido: " + paciente.apellido + "\n" +
             "CPF: " + paciente.cpf + "\n" +
             "Fecha de Nacimiento: " + paciente.nacimiento + "\n" +
             "Dirección: " + paciente.direccion + "\n" +
